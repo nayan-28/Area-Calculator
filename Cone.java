@@ -10,14 +10,14 @@ package com.mycompany.areacalculator;
  */
 public class Cone extends Shape{
 
-   double height,wide;
-    public Cone(double height,double wide) {
+   double height,redius;
+    public Cone(double height,double redius) {
         this.height=height;
-        this.wide=wide;
+        this.redius=redius;
     }
     @Override
     double getArea(){
-        return Math.PI*height*(height+wide);
+        return Math.PI*height*(height+redius);
 
     }
     

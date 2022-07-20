@@ -8,14 +8,13 @@ package com.mycompany.areacalculator;
  *
  * @author Lenovo
  */
-public class Cube extends Shape{
-    double base;
-    public Cube(double base) {
-       this.base=base;
+public class Cube extends Square{
+    public Cube(double base,double height) {
+       super(base,height);
     }
 
     @Override
     double getArea() {
-        return 6*base*base;
+        return 6*super.getArea();
     }
 }

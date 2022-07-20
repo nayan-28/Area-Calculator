@@ -10,8 +10,8 @@ package com.mycompany.areacalculator;
  */
 public class Square extends Rectangle{
 
-    public Square(double heigh,double height) {
-        super(height, height);
+    public Square(double height,double wide) {
+        super(height,wide);
     }
     
 }

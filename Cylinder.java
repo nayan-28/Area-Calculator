@@ -9,13 +9,14 @@ package com.mycompany.areacalculator;
  * @author Lenovo
  */
 public class Cylinder extends Circle{
-
+    double height;
     public Cylinder(double redius,double height) {
-        super(redius,height);
+        super(redius);
+        this.height=height;
     }
 
     @Override
     double getArea() {
-        return 2*Math.PI*redius*(redius+height);
+        return 2*super.getArea()+2*Math.PI*redius*height;
     }  
 }

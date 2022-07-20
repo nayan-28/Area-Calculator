@@ -8,16 +8,14 @@ package com.mycompany.areacalculator;
  *
  * @author Lenovo
  */
-public class Rhombus extends Shape{
-    double height, wide;
+public class Rhombus extends Rectangle{
     public Rhombus(double height,double wide) {
-       this.height = height;
-       this.wide = wide;
+        super(height,wide);
     }
 
     @Override
     double getArea() {
-        return (height * wide)/2;
+        return super.getArea()/2;
     }
     
 }

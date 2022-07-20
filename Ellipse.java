@@ -8,10 +8,11 @@ package com.mycompany.areacalculator;
  *
  * @author Lenovo
  */
-public class Ellipse extends Rectangle {
-
+public class Ellipse extends Shape {
+    double height,wide;
     public Ellipse(double height, double wide) {
-        super(height, wide);
+        this.height=height;
+        this.wide=wide;
     }
 
     @Override

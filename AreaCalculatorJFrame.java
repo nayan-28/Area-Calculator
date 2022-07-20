@@ -48,7 +48,7 @@ public class AreaCalculatorJFrame extends javax.swing.JFrame {
 
         list.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         list.setForeground(new java.awt.Color(0, 153, 255));
-        list.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose an option", "Scalene Triangle", "Equilateral Triangle", "Isoscalene Triangle", "Rightangle Triangle", "Rectangle", "Square", "Rhombus", "Parallelogram", "Trapezium", "Cube", "Cuboid", "Circle", "Polygonal", "Cone", "Cylinder", "Sphere", "Parabola", "Ellipse", "Pyramid" }));
+        list.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose an option", "Scalene Triangle", "Equilateral Triangle", "Isoscalene Triangle", "Rightangle Triangle", "Rectangle", "Square", "Rhombus", "Parallelogram", "Trapezium", "Cube", "Cuboid", "Circle", "Cone", "Cylinder", "Sphere", "Ellipse", "Parabola", "Pyramid", "Polygonal" }));
         list.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 listActionPerformed(evt);
@@ -60,19 +60,19 @@ public class AreaCalculatorJFrame extends javax.swing.JFrame {
         input1.setForeground(new java.awt.Color(0, 51, 153));
         input1.setText("Input Type");
         input1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 0), 3));
-        jPanel2.add(input1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 119, 39));
+        jPanel2.add(input1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 130, 39));
 
         input2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         input2.setForeground(new java.awt.Color(0, 51, 153));
         input2.setText("Input Type");
         input2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 0), 3));
-        jPanel2.add(input2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 119, 42));
+        jPanel2.add(input2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 130, 42));
 
         input3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         input3.setForeground(new java.awt.Color(0, 51, 153));
         input3.setText("Input Type");
         input3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 0), 3));
-        jPanel2.add(input3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 119, 45));
+        jPanel2.add(input3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 130, 45));
 
         t1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         t1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 0), 3));
@@ -81,7 +81,7 @@ public class AreaCalculatorJFrame extends javax.swing.JFrame {
                 t1ActionPerformed(evt);
             }
         });
-        jPanel2.add(t1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 127, 34));
+        jPanel2.add(t1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 127, 34));
 
         t2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         t2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 0), 3));
@@ -90,7 +90,7 @@ public class AreaCalculatorJFrame extends javax.swing.JFrame {
                 t2ActionPerformed(evt);
             }
         });
-        jPanel2.add(t2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 127, 35));
+        jPanel2.add(t2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 127, 35));
 
         t3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         t3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 0), 3));
@@ -99,7 +99,7 @@ public class AreaCalculatorJFrame extends javax.swing.JFrame {
                 t3ActionPerformed(evt);
             }
         });
-        jPanel2.add(t3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 127, 37));
+        jPanel2.add(t3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 127, 37));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 51, 204));
@@ -349,7 +349,7 @@ public class AreaCalculatorJFrame extends javax.swing.JFrame {
 
             } else if (list.getSelectedItem().equals("Cube")) {
                 double a = Double.parseDouble(t1.getText());
-                Cube cube = new Cube(a);
+                Cube cube = new Cube(a,a);
                 String value = String.format("%f", cube.getArea());
                 result.setText("Area: " + value);
 
@@ -362,7 +362,7 @@ public class AreaCalculatorJFrame extends javax.swing.JFrame {
                 result.setText("Area: " + value);
             } else if (list.getSelectedItem().equals("Circle")) {
                 double a = Double.parseDouble(t1.getText());
-                Circle circle = new Circle(a, a);
+                Circle circle = new Circle(a);
                 String value = String.format("%f", circle.getArea());
                 result.setText("Area: " + value);
             } else if (list.getSelectedItem().equals("Polygonal")) {
@@ -380,12 +380,12 @@ public class AreaCalculatorJFrame extends javax.swing.JFrame {
             } else if (list.getSelectedItem().equals("Cylinder")) {
                 double a = Double.parseDouble(t1.getText());
                 double b = Double.parseDouble(t2.getText());
-                Cylinder cylinder = new Cylinder(a, b);
+                Cylinder cylinder = new Cylinder(a,b);
                 String value = String.format("%f", cylinder.getArea());
                 result.setText("Area: " + value);
             } else if (list.getSelectedItem().equals("Sphere")) {
                 double a = Double.parseDouble(t1.getText());
-                Sphere sphere = new Sphere(a, a);
+                Sphere sphere = new Sphere(a);
                 String value = String.format("%f", sphere.getArea());
                 result.setText("Area: " + value);
             } else if (list.getSelectedItem().equals("Parabola")) {

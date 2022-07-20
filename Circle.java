@@ -9,10 +9,9 @@ package com.mycompany.areacalculator;
  * @author Lenovo
  */
 public class Circle extends Shape{
-    double redius,height;
+    double redius;
 
-    public Circle(double redius,double height) {
-        this.height=height;
+    public Circle(double redius) {
         this.redius=redius;
     }
     @Override

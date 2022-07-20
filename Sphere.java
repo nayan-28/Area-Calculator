@@ -9,12 +9,13 @@ package com.mycompany.areacalculator;
  * @author Lenovo
  */
 public class Sphere extends Circle{
-   public Sphere(double redius,double height) {
-        super(redius,height);
+    double height;
+   public Sphere(double redius) {
+        super(redius);
     }
 
     @Override
     double getArea() {
-        return 4*Math.PI*redius*redius;
+        return 4*super.getArea();
     }
 }
